@@ -1,0 +1,23 @@
+
+
+public class TextBook implements Book {
+    private String name;
+    private int totalPages;
+    
+    public TextBook (String name, int totalPages) {
+        this.name = name;
+        this.totalPages = totalPages;
+    }
+    
+    public void read() {
+        System.out.println("Reading : " + name);
+    }
+    
+    public void useAsPillow() {
+        System.out.println("This book has: " + totalPages + " pages");
+        if ( totalPages > 500) {
+            System.out.println("It can be used as a pillow");
+        }
+            
+    }
+}
