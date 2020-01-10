@@ -1,0 +1,14 @@
+
+public class PickleBall extends BallAndRacquetSport
+{
+   private int courtLength = 20;
+   private int courtWidth = 20;
+   
+   public PickleBall (String courtName) {
+    super(courtName);
+   }
+   
+   public int getCourtArea(int courtLength, int courtWidth) {
+    return  courtLength * courtWidth;
+   }
+}
