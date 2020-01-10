@@ -1,0 +1,28 @@
+
+
+public class Car
+{
+   
+   
+   private String name;
+   private String model;
+   private String color;
+   
+   public Car(String name, String model, String color) {
+    this.name = name;
+    this.model = model;
+    this.color = color;
+    
+    System.out.println(name + " ");
+    System.out.println(model + " ");
+    System.out.println(color + " ");
+    }
+   
+   public void start() {
+    System.out.println("The vehicle is starting");
+    }
+   
+    public void stop() {
+    System.out.println("The vehicle is stopping");
+    }
+}
