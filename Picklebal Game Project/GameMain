@@ -1,0 +1,26 @@
+public class GameMain
+{
+    public static void main(String [] args)
+    {
+        Player player1 = new Player("A");
+        Player player2 = new Player("B");
+
+        PickleBallGame game = new PickleBallGame("New York", player1, player2);       
+        // This is one scenario where player 2 wins, whoever gets to 11 first wins
+        // Game 1
+        game.playNewGame();
+        for(int i=0; i<10;i++)
+            game.winPoint(player1);
+        for(int i=0; i<10;i++)
+            game.winPoint(player2);
+        game.winPoint(player2);
+        // This is a scenario where player 1 wins, whoever gets to 11 first wins
+        // Game 2
+        game.playNewGame();
+        for(int i=0; i<10;i++)
+            game.winPoint(player2);
+        for(int i=0; i<10;i++)
+            game.winPoint(player1);
+        game.winPoint(player1);
+    }
+}
