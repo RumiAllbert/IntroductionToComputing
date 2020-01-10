@@ -1,0 +1,50 @@
+
+
+public class ElectricCar extends Car {
+
+    private boolean fullSelfDriving;
+    private double milage = 0;
+    
+    public ElectricCar (String name, String model, String color, boolean fullSelfDriving) {
+        super(name, model, color);
+        this.fullSelfDriving = fullSelfDriving;
+        
+    }
+
+    public void drive(double miles) {
+        milage += miles;
+        if (fullSelfDriving == true) {
+            System.out.println("Car is driving automatically for " + miles + " miles");
+        }
+
+        if (fullSelfDriving == false) {
+            System.out.println("Car is driving manually for " + miles + " miles");
+        }
+    }
+
+    public void charge(boolean chargeOnOff) {
+        if (chargeOnOff == true) {
+            System.out.println("Charging has begun");
+        }
+
+        if (chargeOnOff == false) {
+            System.out.println("Charging done");
+        }
+    }
+
+    public void printCarMilage() {
+        System.out.println("Milage is: " + milage);
+    }
+
+    public void toggleFullSelfDriving () {
+        if (fullSelfDriving == true) {
+            fullSelfDriving = false;
+            System.out.println("Full self driving is OFF");
+        }
+
+        else if (fullSelfDriving == false) {
+            fullSelfDriving = true;
+            System.out.println("Full self driving is ON");
+        }
+    }
+}
