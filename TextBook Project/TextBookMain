@@ -1,0 +1,9 @@
+
+public class TextBookMain {
+   
+    public static void main(String [] args) {
+        TextBook textBook = new TextBook("Journey to the West", 820);
+        textBook.read();
+        textBook.useAsPillow();       
+    }
+}
