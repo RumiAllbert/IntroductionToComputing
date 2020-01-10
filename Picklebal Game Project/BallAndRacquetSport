@@ -1,0 +1,8 @@
+public class BallAndRacquetSport
+{
+   private String courtName;
+   
+   public BallAndRacquetSport (String courtName) {
+       this.courtName = courtName;
+   }
+}
