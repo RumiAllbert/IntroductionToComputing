@@ -1,0 +1,20 @@
+
+
+public class MySQL extends Database {
+    private String connectionString;
+    
+    public MySQL (String name, String connectionString) {
+        super(name);
+        this.connectionString = connectionString;
+    }
+    
+    public void connect() {
+        System.out.println("Connecting to MySQL database FeitianDB" + getName() +
+        " ,connection string = " + connectionString);
+    }
+    
+    public void disconnect() {
+        System.out.println("Disconecting to MySQL database FeitianDB" + getName() +
+        " ,connection string = " + connectionString);
+    }
+}
