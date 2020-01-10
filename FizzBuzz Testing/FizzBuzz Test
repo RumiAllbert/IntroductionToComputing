@@ -1,0 +1,55 @@
+
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class FizzBuzzTest
+{
+    @Test 
+    public void testFizz() {
+        // arrange
+        String expected = "fizz";
+        int input = 3;
+        FizzBuzz fb = new FizzBuzz();
+
+        //act
+        String actual = fb.fizzBuzz(input);
+        //assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testEmpty() {
+        String expected = "";
+        int input = 1;
+        FizzBuzz fb = new FizzBuzz();
+
+        String actual = fb.fizzBuzz(input);
+
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testBuzz () {
+        String expected = "buzz";
+        int input = 5;
+        FizzBuzz fb = new FizzBuzz();
+
+        String actual = fb.fizzBuzz(input);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFizzBuzz () {
+        String expected = "fizz buzz";
+        int input = 30;
+        FizzBuzz fb = new FizzBuzz();
+
+        String actual = fb.fizzBuzz(input);
+
+        assertEquals(expected, actual);
+    }
+}
