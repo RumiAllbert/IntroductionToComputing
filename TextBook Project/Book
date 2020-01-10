@@ -1,0 +1,7 @@
+
+public interface Book {
+    
+    public void read();
+    
+    public void useAsPillow();
+}
