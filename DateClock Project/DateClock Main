@@ -1,0 +1,25 @@
+package org.feitian.cs.oop.impl;
+import org.feitian.cs.oop.DateClock;
+
+public class DateClockMain
+{
+    public static void main(String [] args) {
+        //instantiate your first impl
+        DateClock dc1 = new DateClockImpl1(); 
+        //instantiate your second impl
+        DateClock dc2 = new DateClockImpl2(); 
+
+        // the 2 date strings should match
+        if (! dc2.getDate().equals(dc1.getDate())) {
+            throw new RuntimeException();
+        }
+
+        System.out.println("date1 getDate(): " + dc1.getDate());
+        System.out.println("date1 plusDays(1): " + dc1.plusDays(1).getDate());
+        System.out.println("date1 minusDays(2): " + dc1.minusDays(2).getDate());
+        System.out.println("");
+        System.out.println("date2 getDate(): " + dc2.getDate());
+        System.out.println("date2 plusDays(1): " + dc2.plusDays(1).getDate());
+        System.out.println("date2 minusDays(2): " + dc2.minusDays(2).getDate());    
+    }
+}
