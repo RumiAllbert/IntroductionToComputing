@@ -1,0 +1,26 @@
+
+package org.feitian.cs.oop.impl;
+import org.feitian.cs.oop.DateClock;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+public class DateClockImpl2 implements DateClock
+{
+    private LocalDate myDate = LocalDate.now();
+    
+    public String getDate() {
+        return myDate.toString();
+    }
+    
+    public DateClock minusDays(long days) {
+        myDate = myDate.minusDays(days);
+        return this;
+    }
+    
+    public DateClock plusDays(long days) {
+        myDate = myDate.plusDays(days);
+        return this;
+    }
+}
