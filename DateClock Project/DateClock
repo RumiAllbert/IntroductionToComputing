@@ -1,0 +1,12 @@
+package org.feitian.cs.oop;
+
+public interface DateClock {
+  //Gets this clock's date in 2019-11-23 (yyyy-MM-dd) format
+  public String getDate();
+  
+  //Returns a copy of this clock with the specified number of days subtracted
+  public DateClock minusDays(long days);
+
+  //Returns a copy of this Clock with the specified number of days added
+  public DateClock plusDays(long days);
+}
