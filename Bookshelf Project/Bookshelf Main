@@ -1,0 +1,40 @@
+public class BookshelfMain 
+{
+    public static void main(String [] args)
+    {
+        Bookshelf bookshelf = new Bookshelf();
+        try
+        {
+            bookshelf.addABook(new Textbook("Programming and Problem Solving with Java", "Nell Dale", 100), 0);
+            bookshelf.addABook(new Textbook("Blown to Bits", "Ken Ledeen", -100), 1);
+            bookshelf.addABook(new Textbook("Introduction to Probability", "Charles M. Grinstead", 100), 1);        
+            bookshelf.addABook(new Textbook("Fundamentals of Physics", "R. Shankar", 100), 0);
+
+            bookshelf.printAList();
+            System.out.println("********");
+            bookshelf.removeABook(0);
+            bookshelf.removeABook(0);            
+            bookshelf.printAList();
+            System.out.println("********");            
+            Textbook textBook = bookshelf.getABook(0);
+            System.out.println(textBook.getTitle());
+            System.out.println("********");
+            bookshelf.removeABook(0);
+            bookshelf.printAList();
+            System.out.println("********");
+            bookshelf.removeABook(0);
+            bookshelf.printAList();
+            System.out.println("********");
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        try 
+        {
+            bookshelf.addABook(new Textbook("Programming and Problem Solving with Java", "Nell Dale", -100), 1);
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
