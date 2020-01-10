@@ -1,0 +1,63 @@
+
+public class PickleBallGame extends PickleBall 
+{
+    private Player player1;
+    private Player player2;
+
+    private int highestScore = 11;
+
+    public PickleBallGame(String courtName, Player player1, Player player2) {
+        super(courtName);
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+
+    public void playNewGame() {
+        System.out.println("New Game Starting");
+        player1.resetScore();
+        
+        player2.resetScore();
+    }
+
+    public boolean isHighestScore(Player player) {
+
+        if(player.getScore() == highestScore) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public Player getLeader() {
+        if (player1.getScore() > player2.getScore()) {
+            return player1;
+        } else { 
+            return player2;
+        }
+    }
+
+    public void printWinner() {
+        Player winner = new Player(" ");
+        int player1Score = player1.getScore();
+        int player2Score = player2.getScore();
+        
+        System.out.println(player1.getName() + " " + player1Score + ", " + player2.getName() + ": " +player2Score);
+        if (player1.getScore() != player2.getScore()) {
+            winner = getLeader();
+        }
+
+        if (isHighestScore(winner) == true) {
+            System.out.println(winner.getName() + " is the winner!"); 
+        }
+    }
+
+    public void winPoint(Player player) {
+      if(player.getName().equals(player1.getName()))
+        player1.incrementScore();
+      else
+        player2.incrementScore();
+        printWinner();
+    }
+}
+
