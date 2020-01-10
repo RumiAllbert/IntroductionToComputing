@@ -1,0 +1,7 @@
+public class DatabaseMain {
+   public static void main(String [] args) {
+      Database mysql = new MySQL("FeitianDB", "DBConnectionString");
+      mysql.connect();
+      mysql.disconnect();
+   }
+}
